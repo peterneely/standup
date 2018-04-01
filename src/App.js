@@ -1,4 +1,3 @@
-/* eslint-disable import/no-named-as-default */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Content from './layout/Content';
@@ -20,7 +19,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.element,
 };
 
 export default App;

@@ -6,7 +6,7 @@ const args = [
   ...harmonyProxies,
   'node_modules/jest/bin/jest',
   // First two args are always node and the script running, i.e. ['node', './tools/testCi.js', ...]
-  ...process.argv.slice(2)
+  ...process.argv.slice(2),
 ];
 
 const testCi = spawn('node', args);
