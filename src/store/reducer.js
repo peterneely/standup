@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import dates from '../dates/reducer';
+import events from '../events/reducer';
+import views from '../layout/views/reducer';
 import { routerReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
-  dates,
+  events,
   routing: routerReducer,
+  views,
 });
 
 export default rootReducer;
