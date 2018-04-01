@@ -2,10 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, NavLink, Route } from 'react-router-dom';
-import HomePage from './HomePage';
-import FuelSavingsPage from './containers/FuelSavingsPage';
-import AboutPage from './AboutPage';
-import NotFoundPage from './NotFoundPage';
+import NotFound from './NotFound';
 
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
@@ -24,10 +21,10 @@ class App extends React.Component {
           <NavLink to="/about" activeStyle={activeStyle}>About</NavLink>
         </div>
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/fuel-savings" component={FuelSavingsPage} />
-          <Route path="/about" component={AboutPage} />
-          <Route component={NotFoundPage} />
+          <Route exact path="/" component={NotFound} />
+          <Route path="/fuel-savings" component={NotFound} />
+          <Route path="/about" component={NotFound} />
+          <Route component={NotFound} />
         </Switch>
       </div>
     );
