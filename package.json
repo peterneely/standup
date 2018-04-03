@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "description": "An historical record for standups of what I did yesterday, what I'm doing today, and any blockers.",
   "engines": {
-    "npm": ">=3",
-    "node": "8.9.4"
+    "npm": ">=3"
   },
   "scripts": {
     "preinstall": "node tools/nodeVersionCheck.js",
     "remove-demo": "babel-node tools/removeDemo.js",
     "start-message": "babel-node tools/startMessage.js",
     "prestart": "npm run start-message",
-    "start": "concurrently -k -r -s first \"npm run test:watch\" \"npm run open:src\" \"npm run lint:watch\"",
+    "dev": "concurrently -k -r -s first \"npm run test:watch\" \"npm run open:src\" \"npm run lint:watch\"",
+    "start": "yarn build && node server.js",
     "open:src": "babel-node tools/srcServer.js",
     "open:dist": "babel-node tools/distServer.js",
     "lint": "esw webpack.config.* src tools --color",
@@ -31,6 +31,7 @@
   "author": "Peter Neely",
   "license": "MIT",
   "dependencies": {
+    "express": "4.16.3",
     "material-ui": "1.0.0-beta.40",
     "object-assign": "4.1.0",
     "react": "16.2.0",
