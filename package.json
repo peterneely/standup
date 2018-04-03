@@ -31,6 +31,7 @@
   "author": "Peter Neely",
   "license": "MIT",
   "dependencies": {
+    "babel-cli": "6.24.1",
     "express": "4.16.3",
     "material-ui": "1.0.0-beta.40",
     "object-assign": "4.1.0",
@@ -44,7 +45,6 @@
   },
   "devDependencies": {
     "autoprefixer": "7.1.4",
-    "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
