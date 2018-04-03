@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "An historical record for standups of what I did yesterday, what I'm doing today, and any blockers.",
   "engines": {
-    "npm": ">=3"
+    "npm": ">=3",
+    "node": "8.9.4"
   },
   "scripts": {
     "preinstall": "node tools/nodeVersionCheck.js",
