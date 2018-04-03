@@ -1,8 +1,10 @@
 export default {
   event: {
     date: null,
-    title: '',
+    id: null,
     notes: '',
+    tags: [],
+    title: '',
   },
   list: [],
 };
