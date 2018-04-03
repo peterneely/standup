@@ -1,1 +1,1 @@
-web: yarn deploy
+web: node ./src/server.js
