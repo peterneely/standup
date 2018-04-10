@@ -19,7 +19,6 @@
     "postinstall": "npm run build",
     "prebuild": "npm run lint && npm run clean-dist",
     "prebuild:dev": "npm run lint && npm run test && npm run clean-dist",
-    "preinstall": "node tools/nodeVersionCheck.js",
     "remove-demo": "babel-node tools/removeDemo.js",
     "remove-dist": "rimraf ./dist",
     "start": "node ./src/server.js",
