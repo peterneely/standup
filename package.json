@@ -8,7 +8,7 @@
   "scripts": {
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js",
     "build": "babel-node tools/build.js",
-    "build:open": "babel-node tools/build.js && npm run open:dist",
+    "build:dev": "babel-node tools/build.js && npm run open:dist",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "dev": "concurrently -k -r -s first \"npm run test:watch\" \"npm run open:src\" \"npm run lint:watch\"",
     "lint": "esw webpack.config.* src tools --color",
@@ -17,7 +17,8 @@
     "open:dist": "babel-node tools/distServer.js",
     "open:src": "babel-node tools/srcServer.js",
     "postinstall": "npm run build",
-    "prebuild": "npm run lint && npm run test && npm run clean-dist",
+    "prebuild": "npm run lint && npm run clean-dist",
+    "prebuild:dev": "npm run lint && npm run test && npm run clean-dist",
     "preinstall": "node tools/nodeVersionCheck.js",
     "prestart": "npm run start-message",
     "remove-demo": "babel-node tools/removeDemo.js",
